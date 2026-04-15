@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV & Portfolio Profesional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+        }
+
+        /* HERO SECTION DENGAN BACKGROUND FOTO */
+        .hero {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            /* Ganti link di bawah dengan foto background pilihanmu */
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), 
+                        url('https://assetit.app/wp-content/uploads/2023/11/ITSM-components.jpg') no-repeat center center/cover;
+            background-attachment: fixed; /* Efek Parallax */
+        }
+
+        .hero-content {
+            z-index: 1;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 20px;
+            object-fit: cover;
+            /* Ganti link di bawah dengan foto wajahmu */
+            background-image: url('yazid ijazah.jpg');
+            background-size: cover;
+            display: inline-block;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -2px;
+        }
+
+        /* MAIN LAYOUT */
+        .main-container {
+            max-width: 1100px;
+            margin: -50px auto 50px; /* Menumpuk sedikit ke atas hero */
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 25px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 10px;
+        }
+
+        /* SKILLS GRID */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .skill-item {
+            background: #f1f5f9;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* PORTFOLIO GRID */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .portfolio-img {
+            height: 140px;
+            background: #cbd5e1;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .portfolio-info {
+            padding: 15px;
+        }
+
+        .portfolio-info h4 { margin-bottom: 5px; }
+        .portfolio-info p { font-size: 0.8rem; color: var(--gray); }
+
+        /* CONTACT */
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 850px) {
+            .main-container { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="profile-img"></div>
+            <h1>M YAZID RIANDI S.Tr.Kom</h1>
+            <p>IT SERVICE DESK | TECHNICAL CONSULTANT</p>
+            <p>IT SERVICE MANAGEMENT | IT ASSET MANAGEMENT</p>
+        </div>
+    </section>
+
+    <div class="main-container">
+        
+        <aside>
+            <div class="card">
+                <h2>Kontak</h2>
+                <div class="contact-info">
+                    <p>📍 Bojonegoro,Sedeng,Kanor,Jawa Timur</p>
+                    <p>📧 yazidukel25@gmail.com</p>
+                    <p>📱 +62 8123 0777 566</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Keahlian</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">Maintanance Hardware & Software</div>
+                    <div class="skill-item">Configurasi Jaringan, Mikrotik, ROOTER,LAN,SWITCH</div>
+                    <div class="skill-item">ITIL</div>
+                    <div class="skill-item">DISCOVERY, CMDB</div>
+                    <div class="skill-item">IT Service Managent</div>
+                    <div class="skill-item">IT Asset Management</div>
+                    <div class="skill-item">Technical writer</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Product ITSM TOOLS</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">BMC Helix ITSM</div>
+                    <div class="skill-item">BMC Helix Discovery</div>
+                    <div class="skill-item">BMC Helix CMDB</div>
+                    <div class="skill-item">Fresh Service ITSM</div>
+                    <div class="skill-item">Fresh Service ITSM </div>
+                    <div class="skill-item">Fresh Service Discovery Prob</div>
+                </div>
+            </div>
+        </aside>
+
+        <main>
+            <div class="card">
+                <h2>Tentang Saya</h2>
+                <p>Saya lahir pada tanggal 19 Oktober 1997 di Bojonegoro, saya mendapatkan gelar Sarjana Terapan  Komputer  pada bidang Informatika di Politeknik Negeri Malang pada tahun 2020.</p>
+            </div>
+
+            <div class="card">
+                <h2>Portofolio Proyek</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="portfolio-img" style="background-image: url('https://th.bing.com/th/id/OIP.Xgo-mEGilm3_p0s8PhmUqgHaEK?w=300&h=180&c=7&r=0&o=7&cb=defcache2&dpr=1.5&pid=1.7&rm=3&defcache=1');"></div>
+                        <div class="portfolio-info">
+                            <h4>SSC PERTAMINA ITSM</h4>
+                            <p>Membangun ITSM Pertamina Dengan Modul Incident Management, Problem Management, Service Request Management, Change Management, Release Management</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-img" style="background-image: url('https://tse3.mm.bing.net/th/id/OIP.qeslwuY5-q0e2yceNZ7Y0wHaHa?cb=defcache2&defcache=1&rs=1&pid=ImgDetMain&o=7&rm=3');"></div>
+                        <div class="portfolio-info">
+                            <h4>BPJS KESEHATAN ITSM</h4>
+                            <p>Membangun ITSM BPJS Kesehatan Dengan Modul Incident Management, Problem Management, Service Request Management, Change Management, Release Management</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-img" style="background-image: url('https://3.bp.blogspot.com/-MGuiqdAvNOM/Wf1JjBR9KOI/AAAAAAAAEdc/TZtxIXwxL-wh-p-GxGajYVifhn_ccju6QCLcBGAs/s1600/bi.jpg');"></div>
+                        <div class="portfolio-info">
+                            <h4>BANK INDONESIA ITSM,ITAM</h4>
+                            <p>Membangun ITSM Bank Indonesia Dengan Modul Incident Management, Problem Management, Service Request Management, Change Management, Release Management</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-img" style="background-image: url('data:image/webp;base64,UklGRu4IAABXRUJQVlA4IOIIAABQMACdASobAWQAPp1IoUqlpCOhqHRqULATiWRu3V7UoQbD5fzlbC/nvI94LRWexnHV+unue/S/sC+NP+x3uQ/cH1R+aZ/t/XbvR/o2+XF7VGBAWjeeAoH7P5bgQBkXq9R5Xwk/u5Jlhyv05IL4uW6J7753ctPFjrzO7ViIACqNWBF5hCqqEUmj9GQvSl8XOl/7tjQHTLmXqJzYpe5h6uacpiqMi27CSuIZGu9yjIs4XHSxkRW8ZMrW7kbV2t/SeSQog9sUASRi6DFpNYWBN64mf2l54lN4go5rxI+nlWlSjRadk2h23HkZNrrUx5o5LGp00JN+2WwAZiMXrhLwx+td9AUZ+s5WVX84W2xyCzkQgUN6775+qObj5HmFQglGKkaMziIjziFdIFWFvHyc8Ntg0wXy6Di+ZbRH/VQW3xbQcwXcF++3K7MDOAcFqfHd2hplTXtG2Viug98tzcngLh/WXj91dmi3A2J1S+gbJdTmLRWGiGacSt2yIRGtDvaWxdLtzHCwJqFUUrzTQAD+9fJxD0BGRDlLieKConfEAhri1VD1uRQ5ehDzwyHZJc68nxuYoT7MJyoz6iMi2/+72hwyHK4MvX2LOzubzC3E/eM5Hi4qiVd0LncfqmlJZDUDCkPxz8o7M3IuB6VvJ4V86eGMNpOiDPg3aq+xsgzCwPQfUV/+mZccExJx5I+AFTsAo792H9ZC11YRQ5Rxk//x+ydF5EqaLxmlKlaeJbHe4mS0Z/U6CECEkAInlfw8DJZmBwBivbQ4ft0yqb23YLC58nkH+4h29x5O+UPZxRCVKaJi50xr0yRnzXH3K7l4lVBGM7tOdwkVenyniiFRpYN8pJCCbrgJCxkY2Yo/nAdFDv/HPENzF2TyUVwOLPI0Ej0RLJ+6KFaw8gQoqb66UtNrWe4JWvrz7uROYNl9pHk5Zk5cLS/5xa3NUGbcBGAA+YxvxLBS25xiTXjQspsYxCMz59CFuNVbFLurxeQszSCgXLMd3I6rjNTwsZ9q/Z4x9oUa63BBofmgZXfmn589/JMeDz8QjFFIGIWHRoNkErZc7+xlyl5vdk3qaitKvyUG0xHOqh4RwpfYPBAM5RXn2eM6VwpPHtVmuZTf/uV2Bj2+aGW5UhA0YmobabSlY8IJTiaPYTI8rm2FXPCdLnwIQg7hAjk6JyCDrFkJtZcbCgwslx32w6xTyfHuDtrijl/vOkVxTxQCqCTiucqFd6UGn9mJmItEXEX7RmOVHQ3j7lq1d28wW6id6hKwvhsS0D3LeF4wwI/rUDCfNkTy6e5zrKwpUcYExK5BScuuvATPL23YkZxOy3wGzc4V4/FrlqJOid+z/nWzLSUaN9YW6iJYlbtHALY1ksWps1hIb/X8vOo8XudZkM3fcwIGR81a/yhwb7yQ3BUhZpjzfAjXWDhBgn/JjtOJ9YIL6dgoNwImiPMcQyzbsTA+XUuOhan6MXdOPG+cXhkFNgEI+ulDk7rhnPgtbWmhQ1prFsfhBLnksV4/hQ+Q41TmDktLGfwnq9IxOXL2n3Xl7uwNZIO3seE4m35cyDLLZiBGStYqz5FdD4wvav6lxgq6K9Y5eQlXO/BQgHam5iRyNfqjOI3CrAUfywvVCDZ3z1c9isjp2UGzjIsVS/ivNbGsTYVfDbJodTvxuUbQAfCx4S8zyH4Bm/D8Cark9y0hyIe/ntNKmk86n6qIrUabsK4L2NOL8Ad8vdFaGBbEmKsfcTA9WYHSKl4uiNGUWRLoN3AI3nHg9Mrxkn0euFpfF2VzdhZAWmG7/zHKMpDB7OBGdS/7gx4YzeKKVThMnMkMBujQpCD+LUcdKjzQcUAKmdUYYAyoefvGFO8K31gTb4wj8NSGWFTkPG7UG3Z+XsqZisdD/cb6Xg2hf48ufO6rFoxUokETEWA1ptPkwuZAZZWtYLAmGP2WGXAueenAlEv2Al/cJRRM24bjijNhoKIEuZj6KNkaTywWDEEFL1eOBde61c4lz3v7JOnc+xP2/XS+bhJ5sb5QOkNQEEw/xAWfjx2oyvh9vcH/2TtN9m61nQYgGbL/N0ZTg+I/f02nWR7NX0lxdVk46WvVwaNq4qP+LvNs78Kc3yAlPdcTOWhvsmKz/kAnARcaFY9og4RBv8xqw5kTgKCK8ZyWCFJH+goosQucyhvPVdqQsyDvfZ5BQfwoG/WVhxuf+CxPc0O2SDJoEXiTVBSGY7qWqTIcAckAxmdhmFwKiP9+XiNhRTmfkIjvgDbdanKDm2968ksHnmPkfZoC0Q38XcQBmfQQicrMUMYOQJJoqPecfRL09ZaTTOMum2ZCFOKoDESSh7po7JBmfQ4BBWdCPZZAWJkQSHXAUiKgtqeY9evmOS6RieTEdn1xEeRZiX55R78H3hvquP39aik0TKpEXHPWFTzMH0AOVqVbXjNE4KagiksjcOdd1HGj2U7CWU7173riZ8yjtN0d6jZh9iVIsixpGFKhZiZxZBw6J5ket5UtEWp1T6eDFpNkXL1cbUO6Ghs8l10A399MOvOr0TucLDmWprmgVdugkBZxJd3e8GZqFxT6R/eh/V7PQNSXnggmxnogMNEJgs7o5UGXMTtbZr+FNV3ATOuZVtBbxN8wL5WtzcS4dcw5NSXXpI/6Y+nWNT7gXq8DbLQfW771uDakftKFwrcq/P7H9MK6DjQp3X6CrMvnETHeeKD+gEQXdFAi9HDi6aFcIYwV5+J0h6W1amgQHGIAc9f+SO+d+o1f9ViswEnX6reZggCnQGITIwoXTuKIXrhK+bUZwnFFMA70iAZYNj6IDsifeMcL61xIhSjV9c37/eSWATmGdpbMZb5o5f1SMHaHlYBB141IglqS0U1CIjlmoXqqUNJVFZpJjn0WnPyrTo0sbUYkB1Qs4vHPTwpuMpCmj/wjN2xVygyF5KEln0Z0TM90fc+dEKn22U5pA5hzuH3o7gR9BmIk1tg2E4k0BLRUgMFhN80qeYFbdSRkEWpQGGBDgp9F51zGVv0+RPD3eIcKvGkc5vfFrwAAAAcdkAAAAAAAAAA=');"></div>
+                        <div class="portfolio-info">
+                            <h4>PT MEGA AKSES PERSADA ITSM,ITAM</h4>
+                            <p>Membangun ITSM PT Mega Akses Persada Dengan Modul Incident Management, Problem Management, Service Request Management, Change Management, Release Management</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-img" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQiANP3aE6I3wE_cXr9svuZ1S116UgqqmAyOCYU5vd67QSnlmE2iLTVElYz-xPOGQWNyMqTMo5BTki4fC4cp2EcJ8BURQ49hrGUlstq7GjbKpPurU-e9aT9RTHrol1_XGy3bdizlaJv4D2cWBU1BwqM2CfirlAw86N_rlpm7oBCQitCOz33k-ziQ/s1136/Logo%20Kementerian%20Keuangan%20Indonesia%20(Kemenkeu)%20(PNG-1080px)%20-%20Logopedia.png');"></div>
+                        <div class="portfolio-info">
+                            <h4>PUSINTEK ITSM</h4>
+                            <p>Membangun ITSM PUSINTEK Dengan Modul Incident Management, Problem Management, Service Request Management, Change Management, Release Management</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Pengalaman</h2>
+                <div style="margin-bottom: 20px;">
+                    <h4 style="color: #1e293b;">STAFF IT (PT REALFOOD WINTA ASIA)</h4>
+                    <p style="margin-top: 5px;">Melakukan Perawatan Dan juga Pengembangan Software Maupun Hardware.</p>
+                    <p style="margin-top: 5px;">Melakukan Pendataan Dan Monitoring Asset IT.</p>
+                    <p style="margin-top: 5px;">Berkordinasi Dengan Vendor Pengembang Software Management.</p>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <h4 style="color: #1e293b;">TECHNICAL CONSULTANT (PT MITRA INTEGRASI INFORMATIKA)</h4>
+                    <p style="margin-top: 5px;">Melakukan Assesment Kebutuhan Client.</p>
+                    <p style="margin-top: 5px;">Develop Modul ITSM Incident,Problem,Service Request,Change,Release.</p>
+                    <p style="margin-top: 5px;">Melukan QA Modul Yang Sudah Didevelop.</p>
+                    <p style="margin-top: 5px;">Pembuatan Dokument BRD,FSD,TECDOC,QA.</p>
+                    <p style="margin-top: 5px;">Melakukan Release Module Ke Envirotment Production (Golive).</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer style="text-align: center; padding-bottom: 50px; color: var(--gray); font-size: 0.9rem;">
+        &copy;Sekian & Terimakasih.
+    </footer>
+
+</body>
+</html>
